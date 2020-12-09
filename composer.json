@@ -1,0 +1,41 @@
+{
+	"name": "steadfast/payment-source-select",
+	"description": "Payment Source selection field for Craft CMS users",
+	"type": "craft-plugin",
+	"version": "0.0.1",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Michael Rog",
+			"homepage": "https://topshelfcraft.com"
+		},
+		{
+			"name": "Steadfast Design",
+			"homepage": "https://steadfast.design"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/steadfastdesign/payment-source-select/issues",
+		"source": "https://github.com/steadfastdesign/payment-source-select"
+	},
+	"require": {
+		"php": ">=7.1",
+		"craftcms/commerce": "^3.2"
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"steadfast\\paymentsourceselect\\": "src/"
+		}
+	},
+	"extra": {
+		"name": "Payment Source Select",
+		"handle": "payment-source-select",
+		"developer": "Steadfast Design",
+		"developerUrl": "https://steadfast.design",
+		"developerEmail": "support@steadfast.design",
+		"documentationUrl": "https://steadfast.design",
+		"class": "steadfast\\paymentsourceselect\\PaymentSourceSelect"
+	}
+}
