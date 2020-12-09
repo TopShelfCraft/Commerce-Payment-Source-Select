@@ -166,17 +166,17 @@ class PaymentSourceSelectField extends Field
 			return "&mdash;";
 		}
 
-		if (!($element instanceof User || $element instanceof Order))
+		if (!$this->_isValidElementType($element))
 		{
 			return Craft::$app->getView()->renderTemplate(
-				'payment-source-select/field/invalid',
+				'payment-source-select/field/invalidElementType',
 				[
 					'element' => $element,
 				]
 			);
 		}
 
-		if (empty($element->id))
+		if (!$element->id)
 		{
 			return Craft::$app->getView()->renderTemplate(
 				'payment-source-select/field/unsavedElement',
@@ -216,6 +216,11 @@ class PaymentSourceSelectField extends Field
 			$value = $value->id;
 		}
 		return (int)$value ?: null;
+	}
+
+	private function _isValidElementType(ElementInterface $element): bool
+	{
+		return ($element instanceof User || $element instanceof Order);
 	}
 
 	private function _getPaymentSourceFormOptions(ElementInterface $element): array
