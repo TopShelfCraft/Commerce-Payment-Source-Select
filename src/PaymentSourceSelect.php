@@ -1,11 +1,10 @@
 <?php
-namespace steadfast\paymentsourceselect;
+namespace beSteadfast\PaymentSourceSelect;
 
 use Craft;
 use craft\base\Plugin;
 use craft\events\RegisterComponentTypesEvent;
 use craft\services\Fields;
-use steadfast\paymentsourceselect\config\Settings;
 use yii\base\Event;
 
 
@@ -16,8 +15,6 @@ use yii\base\Event;
  * `Craft::$app->getModule('payment-source-select')`
  *
  * @see http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
- *
- * @method Settings getSettings()
  *
  */
 class PaymentSourceSelect extends Plugin
@@ -88,17 +85,6 @@ class PaymentSourceSelect extends Plugin
 
 		$this->_registerEventHandlers();
 
-	}
-
-
-	/**
-	 * Creates and returns the model used to store the plugin’s settings.
-	 *
-	 * @return Settings|null
-	 */
-	protected function createSettingsModel()
-	{
-		return new Settings();
 	}
 
 

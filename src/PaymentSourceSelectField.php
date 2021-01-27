@@ -1,5 +1,5 @@
 <?php
-namespace steadfast\paymentsourceselect;
+namespace beSteadfast\PaymentSourceSelect;
 
 use Craft;
 use craft\base\ElementInterface;
