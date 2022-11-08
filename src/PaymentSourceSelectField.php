@@ -1,5 +1,5 @@
 <?php
-namespace beSteadfast\PaymentSourceSelect;
+namespace TopShelfCraft\PaymentSourceSelect;
 
 use Craft;
 use craft\base\ElementInterface;
